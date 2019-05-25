@@ -1,4 +1,4 @@
-const staticCacheName = 'resturantCacheV2';
+const staticCacheName = 'resturantCacheV4';
 console.log(staticCacheName);
 self.addEventListener('install', (event) => {
   console.log(event);
@@ -13,13 +13,25 @@ self.addEventListener('install', (event) => {
         'js/restaurant_info.js',
         'data/restaurants.json',
         'css/styles.css',
-        'img/'
+
       ]);
     })
   );
 });
 
- self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.open(staticCacheName).then(function(cache) {
+      return cache.match(event.request).then(function (response) {
+        return response || fetch(event.request).then(function(response) {
+          cache.put(event.request, response.clone());
+          return response;
+        });
+      });
+    })
+  );
+});
+ /*self.addEventListener('fetch', (event) => {
    const evt = event.request;
    console.log(evt.url);
    event.respondWith(
@@ -32,7 +44,7 @@ self.addEventListener('install', (event) => {
        })
      })
    );
- });
+ });*/
 
  self.addEventListener('activate', function(event) {
    event.waitUntil(
