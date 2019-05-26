@@ -1,4 +1,4 @@
-const staticCacheName = 'resturantCacheV5';
+const staticCacheName = 'resturantCacheV6';
 console.log(staticCacheName);
 self.addEventListener('install', (event) => {
   console.log(event);
