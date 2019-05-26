@@ -24,6 +24,7 @@ self.addEventListener('fetch', function(event) {
     caches.open(staticCacheName).then(function(cache) {
       return cache.match(event.request).then(function (response) {
         return response || fetch(event.request).then(function(response) {
+          console.log(event.request);
           cache.put(event.request, response.clone());
           return response;
         });
@@ -31,20 +32,6 @@ self.addEventListener('fetch', function(event) {
     })
   );
 });
- /*self.addEventListener('fetch', (event) => {
-   const evt = event.request;
-   console.log(evt.url);
-   event.respondWith(
-     caches.match(evt).then((request) => {
-       console.log(request);
-       return request || fetch(request.url).then((response) => {
-         caches.open(staticCacheName).then((cache) => {
-           cache.add(response);
-         })
-       })
-     })
-   );
- });*/
 
  self.addEventListener('activate', function(event) {
    event.waitUntil(

@@ -1,0 +1,20 @@
+{
+  "short_name" : "Resturants",
+  "name": "Ny Resturants",
+  "icon": [
+    {
+      "src": "css/tablet.png",
+      "type": "images/png",
+      "size": "950x1024"
+    },
+    {
+      "src": "css/phone.png",
+      "type": "images/png",
+      "size": "540x800"
+    }
+  ],
+  "start_url": "/portfolio/",
+  "background_color": "#00FFFF",
+  "display": "standalone",
+  "theme_color": "#008000"
+}

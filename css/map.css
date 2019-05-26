@@ -1,0 +1,17 @@
+@media (max-width: 800px) {
+  .inside td,p {
+    font-size: large;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .inside #map-container {
+    height: 15%;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+  }
+  .inside #map {
+    contain: content;
+  }
+}
