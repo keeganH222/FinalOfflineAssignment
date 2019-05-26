@@ -3,12 +3,12 @@
   "name": "Ny Resturants",
   "icon": [
     {
-      "src": "css/tablet.png",
+      "src": "img/tablet.png",
       "type": "images/png",
       "size": "950x1024"
     },
     {
-      "src": "css/phone.png",
+      "src": "img/phone.png",
       "type": "images/png",
       "size": "540x800"
     }
