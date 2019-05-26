@@ -1,10 +1,9 @@
-const staticCacheName = 'resturantCacheV6';
-console.log(staticCacheName);
+const staticCacheName = 'resturantCacheV7';
 self.addEventListener('install', (event) => {
-  console.log(event);
   event.waitUntil(
     caches.open(staticCacheName).then((cache) => {
       return cache.addAll([
+        './',
         'index.html',
         'restaurant.html',
         'js/dbhelper.js',
@@ -23,7 +22,6 @@ self.addEventListener('fetch', function(event) {
     caches.open(staticCacheName).then(function(cache) {
       return cache.match(event.request).then(function (response) {
         return response || fetch(event.request).then(function(response) {
-          console.log(event.request);
           cache.put(event.request, response.clone());
           return response;
         });
