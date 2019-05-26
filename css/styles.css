@@ -398,5 +398,8 @@ nav h1 a {
   .inside #footer {
     display: none;
   }
+  .inside #breadcrumb {
+    display: none;
+  }
 }
 
