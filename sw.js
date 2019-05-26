@@ -1,9 +1,9 @@
-const staticCacheName = 'resturantCacheV7';
+const staticCacheName = 'resturantCacheV8';
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(staticCacheName).then((cache) => {
       return cache.addAll([
-        './',
+        '/FinalOfflineAssignment/',
         'index.html',
         'restaurant.html',
         'js/dbhelper.js',
