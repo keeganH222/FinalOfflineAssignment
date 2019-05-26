@@ -1,4 +1,4 @@
-const staticCacheName = 'resturantCacheV4';
+const staticCacheName = 'resturantCacheV5';
 console.log(staticCacheName);
 self.addEventListener('install', (event) => {
   console.log(event);
@@ -12,7 +12,7 @@ self.addEventListener('install', (event) => {
         'js/restaurant_info.js',
         'data/restaurants.json',
         'css/styles.css',
-
+        'manifest.json'
       ]);
     })
   );
