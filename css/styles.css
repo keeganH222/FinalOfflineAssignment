@@ -389,6 +389,11 @@ nav h1 a {
   .inside #restaurant-container {
     position: absolute;
     top: 35%;
+    border-bottom: none;
+    border-right: 1px solid #d9d9d9;
+  }
+  #restaurant-container td {
+    margin-bottom: 1px;
   }
   .inside #reviews-container {
     position: absolute;
@@ -401,5 +406,10 @@ nav h1 a {
   .inside #breadcrumb {
     display: none;
   }
+  #reviews-list li {
+    padding: 0 0 20px;
+
+  }
 }
+
 
