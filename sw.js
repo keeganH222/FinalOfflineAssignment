@@ -1,4 +1,4 @@
-const staticCacheName = 'resturantCacheV11';
+const staticCacheName = 'resturantCacheV12';
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(staticCacheName).then((cache) => {
