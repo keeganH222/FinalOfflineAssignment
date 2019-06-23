@@ -13,7 +13,7 @@ Testing my knowledge of service workers and local caching. This project is from 
 
 2. Open the code using terminal command code .
 
-3. Edit dbhelper.js and change the function get restaurants with the port of your serve and change the return to  ```return "localhost:#${port}"```
+3. Edit dbhelper.js and change the function get restaurants with the port of your serve and change the return to  ```return "https://localhost:#${port}"```
 
 4. Go ahead and click on the vsc extension Go Live to see the results.
 
